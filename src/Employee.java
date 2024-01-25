@@ -7,7 +7,7 @@ public class Employee {
         3. Добавить в класс Employee поле id, которое проставляется из счетчика, а затем счетчик увеличивает свое значение.
         4. Добавить возможность получать значения полей из Employee (геттеры) для всех полей.
         5. Добавить возможность устанавливать значения полей отдела и зарплаты (сеттеры).
-        6. По умолчанию все поля должны передавать через конструктор (кроме id) и заполняться в нем (включая id,
+        6. По умолчанию все поля должны передавать через конструктор (кроме id) и заполняться в нем (включая id,
          который нужно получить из счетчика).
 
      */
@@ -20,7 +20,42 @@ public class Employee {
 
     // статическую переменную-счетчик, которая будет отвечать за id.
 
-    public
+    public Employee(String name, String surname, String derivativeSurname, int salary, int departmentNumber, int id) {
+        this.name = name;
+        this.surname = surname;
+        this.derivativeSurname = derivativeSurname;
+        this.salary = salary;
+        this.derivativeSurname = derivativeSurname;
+        this.id = id;
+    }
+
+        public String getName() {
+            return name;
+        }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getDerivativeSurname() {
+        return derivativeSurname;
+    }
+
+    public int getDepartmentNumber() {
+        return departmentNumber;
+    }
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public int settSalary() {
+        return salary;
+    }
 
 
 }
