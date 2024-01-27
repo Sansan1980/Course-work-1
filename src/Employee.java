@@ -16,22 +16,22 @@ public class Employee {
     private String derivativeSurname;
     private int salary;
     private int departmentNumber;
-    private int id;
+    public static int id;
 
     // статическую переменную-счетчик, которая будет отвечать за id.
 
     public Employee(String name, String surname, String derivativeSurname, int salary, int departmentNumber, int id) {
         this.name = name;
         this.surname = surname;
-        this.derivativeSurname = derivativeSurname;
+        this.departmentNumber = departmentNumber;
         this.salary = salary;
         this.derivativeSurname = derivativeSurname;
-        this.id = id;
+        Employee.id++;
     }
 
-        public String getName() {
-            return name;
-        }
+    public String getName() {
+        return name;
+    }
 
     public String getSurname() {
         return surname;
@@ -55,6 +55,12 @@ public class Employee {
 
     public int settSalary() {
         return salary;
+    }
+
+    public String toString() {
+        var s = "Имя - " + name + ", " + "Фамилия - " + derivativeSurname + ", " + "Отчество -" + '\'' +
+                surname + ", " + "Зарплата :" + salary + ", " + "Отдел №-" + departmentNumber + ", ID № - " + Employee.id;
+        return s;
     }
 
 

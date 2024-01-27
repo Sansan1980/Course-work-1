@@ -11,5 +11,15 @@ public class Main {
     5. Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
     6. Получить Ф. И. О. всех сотрудников (вывести в консоль).
          */
+
+
+        Employee employee = new Employee("Ivan", "Ivanovich", "Ivanov", 300000, 2, Employee.id);
+        employee = new Employee("Ivan", "Ivanovich", "Ivanov", 300000, 2, Employee.id);
+        employee = new Employee("Ivan", "Ivanovich", "Ivanov", 300000, 2, Employee.id);
+        employee = new Employee("Ivan", "Ivanovich", "Ivanov", 300000, 2, Employee.id);
+        employee = new Employee("Ivan", "Ivanovich", "Ivanov", 300000, 2, Employee.id);
+        System.out.println(employee);
+
+
     }
 }
