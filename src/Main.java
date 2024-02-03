@@ -29,6 +29,7 @@ public class Main {
         System.out.println("Сотрудник с минимальной зарпатой - " + searchEmployeeSalaryMinimum());
         System.out.println("Сотрудник с максимальной зарпатой - " + searchEmployeeSalaryMaximum());
         System.out.println("Средняя зарплата = " + CalculateAverageSalary() + " рублей");
+        getFullNamesAllEmployees();
     }
 
     public static void addPrintEmployee() {
@@ -90,5 +91,12 @@ public class Main {
     public static int CalculateAverageSalary() {
         int averageSalary = calculateAmountMonthlySalaryCosts() / numberEmployees();
         return averageSalary;
+    }
+    public static void getFullNamesAllEmployees() {
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] != null) {
+                System.out.println("ФИО сотрудника :" + employees[i].getFulName());
+            }
+        }
     }
 }
