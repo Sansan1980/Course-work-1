@@ -28,7 +28,6 @@ public class Main {
         System.out.println("Сумма затрат на зарплаты сотрудников за месяц  = " + calculateAmountMonthlySalaryCosts() + " рублей.");
         System.out.println("Сотрудник с минимальной зарпатой - " + searchEmployeeSalaryMinimum());
         System.out.println("Сотрудник с максимальной зарпатой - " + searchEmployeeSalaryMaximum());
-        searchEmployeeSalaryMaximum();
         System.out.println("Средняя зарплата = " + CalculateAverageSalary() + " рублей");
     }
 
