@@ -28,7 +28,7 @@ public class Main {
         System.out.println("Сумма затрат на зарплаты сотрудников за месяц  = " + calculateAmountMonthlySalaryCosts() + " рублей.");
         System.out.println("Сотрудник с минимальной зарпатой - " + searchEmployeeSalaryMinimum());
         System.out.println("Сотрудник с максимальной зарпатой - " + searchEmployeeSalaryMaximum());
-        System.out.println("Средняя зарплата = " + CalculateAverageSalary() + " рублей");
+        System.out.println("Средняя зарплата = " + сalculateAverageSalary() + " рублей");
         getFullNamesAllEmployees();
     }
 
@@ -88,7 +88,7 @@ public class Main {
         return size;
     }
 
-    public static int CalculateAverageSalary() {
+    public static int сalculateAverageSalary() {
         int averageSalary = calculateAmountMonthlySalaryCosts() / numberEmployees();
         return averageSalary;
     }
