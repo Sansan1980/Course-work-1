@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
     /*
     - **Базовая сложность**
@@ -14,24 +16,24 @@ public class Employee {
     private String name;
     private String surname;
     private String derivativeSurname;
-    private int salary;
+    private Integer salary;
     private int departmentNumber;
+    private static int counter;
     private int id;
 
-    // статическую переменную-счетчик, которая будет отвечать за id.
-
-    public Employee(String name, String surname, String derivativeSurname, int salary, int departmentNumber, int id) {
+    public Employee(String name, String surname, String derivativeSurname, int salary, int departmentNumber) {
         this.name = name;
         this.surname = surname;
-        this.derivativeSurname = derivativeSurname;
+        this.departmentNumber = departmentNumber;
         this.salary = salary;
         this.derivativeSurname = derivativeSurname;
-        this.id = id;
+        this.id = ++ counter;
+
     }
 
-        public String getName() {
-            return name;
-        }
+    public String getName() {
+        return name;
+    }
 
     public String getSurname() {
         return surname;
@@ -57,5 +59,27 @@ public class Employee {
         return salary;
     }
 
+    public String getFulName() {
 
+        return name + ", " + surname + ", " + derivativeSurname;
+    }
+
+    @Override
+    public String toString() {
+        return "Имя - " + name + ", " + "Фамилия - " + derivativeSurname + ", " + "Отчество -" + '\'' +
+                surname + ", " + "Зарплата :" + salary + ", " + "Отдел №-" + departmentNumber + ", ID № - " + getId();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return salary == employee.salary && departmentNumber == employee.departmentNumber && Objects.equals(name, employee.name) && Objects.equals(surname, employee.surname) && Objects.equals(derivativeSurname, employee.derivativeSurname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, derivativeSurname, salary, departmentNumber);
+    }
 }
